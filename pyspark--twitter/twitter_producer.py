@@ -1,5 +1,4 @@
 import tweepy
-#from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import KafkaProducer, KafkaConsumer
@@ -57,7 +56,7 @@ get_twitter_data()
 def periodic_work(interval):
 while True:
 get_twitter_data()
-#interval should be an integer, the number of second to wait
+
 time.sleep(interval)
 
 # get data every couple of minute
